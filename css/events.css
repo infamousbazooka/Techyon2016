@@ -60,3 +60,9 @@ html,body{
 #etc{
 	background-color: #01053a;
 }
+@media only screen and (max-width:1024px) {
+	.sections li{
+		width: 50%;
+		height: 50%;
+	}
+}
