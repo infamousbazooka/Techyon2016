@@ -1,4 +1,11 @@
 $(document).ready(function() {
+	init();
+});
+$(window).resize(function() {
+	init();
+});
+
+function init(){
 	var trans = $(window).width() - $('.social h2').outerWidth();
 	trans = 'translate(' + trans + 'px)';
 	$('.social').css('transform', trans);
@@ -11,23 +18,5 @@ $(document).ready(function() {
 		var trans = $(window).width() - $('.social h2').outerWidth();
 		trans = 'translate(' + trans + 'px)';
 		$(this).css('transform', trans);
-	});
-
-
-	init();
-});
-$(window).resize(function() {
-});
-
-
-function init () {
-	$('#events').click(function(event) {
-		$('body').load('events/');
-	});
-	$('#contact').click(function(event) {
-		$('body').load('contact/');
-	});
-	$('#team').click(function(event) {
-		$('body').load('team/');
 	});
 }

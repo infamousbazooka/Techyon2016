@@ -1,0 +1,62 @@
+@import 'https://fonts.googleapis.com/css?family=Alegreya|Crete+Round|Righteous';
+*{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	transition: all .5s ease-in-out;
+}
+ul,li,ol,a{
+	text-decoration: none;
+	list-style: none;
+}
+html,body{
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+.block{
+	display: block;
+}
+.inline{
+	display: inline-block;
+}
+.img-responsive{
+	width: 100%;
+}
+.sections{
+	height: 100%;
+	font-size: 0;
+}
+.sections li{
+	height: 100%;
+	width: 25%;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+.sections li:hover{
+	cursor: pointer;
+	box-shadow: -5px 0px 10px #000;
+}
+.sections li:hover div{
+	-ms-transform: translateX(0px);
+	-webkit-transform: translateX(0px);
+	transform: translateX(0px);
+}
+.sections div{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+#it{
+	background-color: #f15d22;
+}
+#mech{
+	background-color: #000;
+}
+#comp{
+	background-color: #484848;
+}
+#etc{
+	background-color: #01053a;
+}
