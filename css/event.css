@@ -13,10 +13,12 @@ a,ul,li,ol{
 	width: 100%;
 }
 .wrapper{
-	margin: 3%;
 	-ms-transform: translateY(10%);
 	-webkit-transform: translateY(10%);
 	transform: translateY(10%);
+}
+.wrapper > .row{
+	margin: 0 10px;
 }
 .card-content a{
 	text-align: center;
@@ -33,4 +35,14 @@ a,ul,li,ol{
 }
 .card-action a{
 	color: #333 !important;
+}
+footer{
+	background-color: #222d2f !important;
+}
+@media only screen and (max-width:1024px) {
+	.wrapper{
+		-ms-transform: translateY(2%);
+		-webkit-transform: translateY(2%);
+		transform: translateY(2%);
+	}
 }
