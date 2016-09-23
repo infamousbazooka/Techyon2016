@@ -14,9 +14,9 @@ a,ul,li,ol{
 }
 .wrapper{
 	margin: 3%;
-	-ms-transform: translateY(15%);
-	-webkit-transform: translateY(15%);
-	transform: translateY(15%);
+	-ms-transform: translateY(10%);
+	-webkit-transform: translateY(10%);
+	transform: translateY(10%);
 }
 .card-content a{
 	text-align: center;
@@ -30,4 +30,7 @@ a,ul,li,ol{
 	position: absolute;
 	bottom: 0;
 	left: 0;
+}
+.card-action a{
+	color: #333 !important;
 }
