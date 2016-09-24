@@ -8,7 +8,6 @@
 h1,h2,h3,h4,h5,h6{
 	color: #fafafa;
 	font-weight: bold;
-	letter-spacing: 2px;
 	font-family: 'Open Sans', sans-serif;
 }
 ul,li,ol,a{
@@ -32,7 +31,7 @@ body{
 	padding: 5% !important;
 }
 .container .s4 .card{
-	background-color: #0d1d31;
+	background-color: #dc143c;
 }
 .title .card{
 	padding: 5px 10px;
@@ -44,7 +43,7 @@ body{
 	text-align: right;
 }
 .tr i{
-	color: #2980b9;
+	color: #fafafa;
 }
 
 .heading{
@@ -60,4 +59,8 @@ body{
 .card-content p{
 	color: #fafafa !important;
 	font-size: .9em;
+}
+.height{
+	width: 100%;
+	height: 20px;
 }
