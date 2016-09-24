@@ -1,26 +1,23 @@
-@import 'https://fonts.googleapis.com/css?family=Alegreya|Crete+Round|Open+Sans';
+@import 'https://fonts.googleapis.com/css?family=Righteous';
 *{
 	padding: 0;
 	margin: 0;
 	transition: all .5s ease-in-out;
-	font-family: 'Alegreya', serif;
+	font-family: 'Righteous', cursive;
 }
 h1,h2,h3,h4,h5,h6{
 	color: #fafafa;
 	font-weight: bold;
 	letter-spacing: 2px;
-	font-family: 'Open Sans', sans-serif;
 }
 ul,li,ol,a{
 	text-decoration: none;
 	list-style: none;
 	color: #333;
-	font-family: 'Crete Round', serif;
 }
 p{
 	color: #fafafa;
 	font-size: 1.3em;
-	font-family: 'Open Sans', sans-serif;
 }
 .img-responsive{
 	width: 100%;

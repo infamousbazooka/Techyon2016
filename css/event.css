@@ -1,19 +1,29 @@
-@import 'https://fonts.googleapis.com/css?family=Alegreya|Crete+Round|Righteous';
+@import 'https://fonts.googleapis.com/css?family=Righteous';
 *{
 	padding: 0;
 	margin: 0;
 	transition: all .5s ease-in-out;
-	font-family: 'Alegreya', serif;
+	font-family: 'Righteous', cursive;
 }
 a,ul,li,ol{
 	list-style: none;
 	text-decoration: none;
 }
-body{
-	background-color: #0d1d31;
-}
 .img-responsive{
 	width: 100%;
+}
+.block{
+	display: block;
+}
+.inline{
+	display: inline-block;
+}
+footer h6{
+	width: calc(50% - 2px);
+	padding: 0 10px;
+}
+.righttext{
+	text-align: right;
 }
 .btn{
 	background-color: #dc143c !important;

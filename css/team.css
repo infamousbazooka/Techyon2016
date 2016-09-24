@@ -1,25 +1,19 @@
-@import 'https://fonts.googleapis.com/css?family=Alegreya|Crete+Round|Open+Sans';
+@import 'https://fonts.googleapis.com/css?family=Righteous|Open+Sans';
 *{
 	padding: 0;
 	margin: 0;
 	transition: all .5s ease-in-out;
-	font-family: 'Alegreya', serif;
+	font-family: 'Open Sans', sans-serif;
 }
 h1,h2,h3,h4,h5,h6{
 	color: #fafafa;
 	font-weight: bold;
-	font-family: 'Open Sans', sans-serif;
-}
-ul,li,ol,a{
-	text-decoration: none;
-	list-style: none;
-	color: #333;
-	font-family: 'Crete Round', serif;
 }
 p{
-	color: #fafafa;
 	font-size: 1.3em;
-	font-family: 'Open Sans', sans-serif;
+}
+h6, p{
+	color: #fafafa !important;
 }
 .img-responsive{
 	width: 100%;
@@ -57,7 +51,6 @@ body{
 	color: #dc143c;
 }
 .card-content p{
-	color: #fafafa !important;
 	font-size: .9em;
 }
 .height{
