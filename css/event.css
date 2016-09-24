@@ -9,8 +9,17 @@ a,ul,li,ol{
 	list-style: none;
 	text-decoration: none;
 }
+body{
+	background-color: #0d1d31;
+}
 .img-responsive{
 	width: 100%;
+}
+.btn{
+	background-color: #dc143c !important;
+}
+.btn.red{
+	background-color: #0d1d31 !important;
 }
 .wrapper{
 	-ms-transform: translateY(10%);
@@ -37,7 +46,7 @@ a,ul,li,ol{
 	color: #333 !important;
 }
 footer{
-	background-color: #222d2f !important;
+	background-color: #0d1d31 !important;
 }
 @media only screen and (max-width:1024px) {
 	.wrapper{
