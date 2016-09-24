@@ -19,8 +19,8 @@ a,ul,li,ol{
 	display: inline-block;
 }
 footer h6{
-	width: calc(50% - 2px);
-	padding: 0 10px;
+	width: calc(50% - 3px);
+	padding: 0 5%;
 }
 .righttext{
 	text-align: right;
@@ -63,5 +63,8 @@ footer{
 		-ms-transform: translateY(2%);
 		-webkit-transform: translateY(2%);
 		transform: translateY(2%);
+	}
+	footer .righttext{
+		display: none;
 	}
 }

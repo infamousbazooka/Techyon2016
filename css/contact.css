@@ -19,6 +19,19 @@ p{
 	color: #fafafa;
 	font-size: 1.3em;
 }
+.block{
+	display: block;
+}
+.inline{
+	display: inline-block;
+}
+footer h6{
+	width: calc(50% - 3px);
+	padding: 0 5%;
+}
+.righttext{
+	text-align: right;
+}
 .img-responsive{
 	width: 100%;
 }
@@ -69,16 +82,22 @@ form{
 	margin-top: 5% !important;
 }
 footer{
-	background-color: #222d2f !important;
+	background-color: #0d1d31 !important;
 }
 @media only screen and (max-width:1024px) {
 	.content{
 		width: 100%;
-		padding-top: 20px;
+		padding-top: 30%;
 		padding-left: 20px;
 		padding-right: 20px;
 	}
 	.content .card{
 		padding: 10px;
+	}
+	footer h6{
+		width: 100%;
+	}
+	footer .righttext{
+		display: none;
 	}
 }
