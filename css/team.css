@@ -1,0 +1,63 @@
+@import 'https://fonts.googleapis.com/css?family=Alegreya|Crete+Round|Open+Sans';
+*{
+	padding: 0;
+	margin: 0;
+	transition: all .5s ease-in-out;
+	font-family: 'Alegreya', serif;
+}
+h1,h2,h3,h4,h5,h6{
+	color: #fafafa;
+	font-weight: bold;
+	letter-spacing: 2px;
+	font-family: 'Open Sans', sans-serif;
+}
+ul,li,ol,a{
+	text-decoration: none;
+	list-style: none;
+	color: #333;
+	font-family: 'Crete Round', serif;
+}
+p{
+	color: #fafafa;
+	font-size: 1.3em;
+	font-family: 'Open Sans', sans-serif;
+}
+.img-responsive{
+	width: 100%;
+}
+body{
+	background-color: #0d1d31;
+}
+.container{
+	padding: 5% !important;
+}
+.container .s4 .card{
+	background-color: #0d1d31;
+}
+.title .card{
+	padding: 5px 10px;
+}
+.card-title{
+	background-color: rgba(34,34,34,.8);
+}
+.tr{
+	text-align: right;
+}
+.tr i{
+	color: #2980b9;
+}
+
+.heading{
+	margin: 20px 0;
+}
+.heading i{
+	margin-right: 5px;
+	background-color: #fafafa;
+	padding: 10px;
+	border-radius: 10px;
+	color: #dc143c;
+}
+.card-content p{
+	color: #fafafa !important;
+	font-size: .9em;
+}
