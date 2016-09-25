@@ -16,7 +16,10 @@ h6, p{
 	color: #fafafa !important;
 }
 .red{
-	background-color: #dc143c !important;
+	background-color: #fafafa !important;
+}
+.red i{
+	color: #dc143c !important;
 }
 .img-responsive{
 	width: 100%;
