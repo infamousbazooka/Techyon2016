@@ -22,7 +22,7 @@ function init(){
 }
 
 var minimumShowLoadingTimeReached = false;
-setTimeout(function() {minimumShowLoadingTimeReached = true;}, 5000);
+setTimeout(function() {minimumShowLoadingTimeReached = true;}, 000);
 function preloader() {
 	if (minimumShowLoadingTimeReached) {
 		showContent();
