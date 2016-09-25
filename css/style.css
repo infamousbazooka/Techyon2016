@@ -34,6 +34,9 @@ canvas{
 	top: 0;
 	left: 0;
 }
+.loaded .loader{
+	display: none;
+}
 .mainwrapper{
 	z-index: 2;
 	position: fixed;

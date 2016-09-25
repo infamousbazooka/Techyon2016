@@ -20,3 +20,7 @@ function init(){
 		$(this).css('transform', trans);
 	});
 }
+
+function hideloader() {
+	$('body').addClass('loaded');
+}
