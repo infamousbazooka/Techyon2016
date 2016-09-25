@@ -11,6 +11,42 @@
 	<link rel="stylesheet" href="../css/schedule.css">
 </head>
 <body>
+	<div class="loader">
+		<svg></svg>
+	</div>
+	<style>
+		html,body{
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+		}
+		.loader{
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 99999;
+			width: 100%;
+			height: 100%;
+			background-color: #fafafa;
+		}
+		svg {
+			position: absolute;
+			width: 400px;
+			height: 400px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		line {
+			stroke-width: 2.5;
+		}
+	</style>
+	<script src="../js/TweenLite.min.js"></script>
+	<script src="../js/TweenMax.min.js"></script>
+	<script>
+		"use strict";function createPoint(a){var b=document.createElementNS(svgns,"circle");root.appendChild(b);var c=random(75,125);return TweenLite.set(b,{attr:{r:2.5,fill:a},x:random(-twoPi,twoPi),y:random(-twoPi,twoPi)}),TweenMax.to(b,random(2,6),{x:"+="+twoPi,repeat:-1,modifiers:{x:function(b){return cx+Math.cos(b)*c}}}),TweenMax.to(b,random(2,6),{y:"+="+twoPi,repeat:-1,modifiers:{y:function(b){return cy+Math.sin(b)*c}}}),b._gsTransform}function createLine(a,b,c){var d=document.createElementNS(svgns,"line");root.appendChild(d),TweenLite.set(d,{alpha:b,stroke:c,x:cx,y:cy});var e=d._gsTransform;return TweenMax.to(d,1e3,{x:"+=1",y:"+=1",repeat:-1,modifiers:{x:function(c){return c=e.x+(a.x-e.x)*ease,d.setAttribute("x2",a.x-c),c},y:function(c){return c=e.y+(a.y-e.y)*ease,d.setAttribute("y2",a.y-c),c}}}),e}function random(a,b){return null==b&&(b=a,a=0),Math.random()*(b-a)+a}TweenLite.defaultEase=Linear.easeNone;var cx=200,cy=200,svgns="http://www.w3.org/2000/svg",root=document.querySelector("svg"),twoPi=2*Math.PI,ease=.35,total=25,colors=["#EA4335","#FBBC05","#34A853","#4285F4"];colors.forEach(function(a){for(var b=createPoint(a),c=total;c--;){var d=(c+1)/total;b=createLine(b,d,a)}}),TweenLite.from("line, circle",1.5,{alpha:0});
+	</script>
 	<div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
 		<a class="btn-floating btn-large red">
 			<i class="material-icons">menu</i>
@@ -32,129 +68,242 @@
 	</div>
 	<div class="wrapper container">
 		<div class="row day">
-			<a class="col s12 m6"><h6>DAY 1</h6></a>
-			<a class="col s12 m6"><h6>DAY 2</h6></a>
+			<a id="dayone" class="col s12 m6 active" onclick="changeView(1, 1)"><h6>DAY 1</h6></a>
+			<a id="daytwo" class="col s12 m6" onclick="changeView(2, 1)"><h6>DAY 2</h6></a>
 		</div>
 		<div class="row events">
-			<a class="col s12 m3"><p class="active">Turbulence</p></a>
-			<a class="col s12 m3"><p>Mindspark</p></a>
-			<a class="col s12 m3"><p>Dotslash</p></a>
-			<a class="col s12 m3"><p>Avishkar</p></a>
+			<a id="mech" class="col s12 m3 active" onclick="changeView(3, 1)"><p>Turbulence</p></a>
+			<a id="it" class="col s12 m3" onclick="changeView(3, 2)"><p>Mindspark</p></a>
+			<a id="comp" class="col s12 m3" onclick="changeView(3, 3)"><p>Dotslash</p></a>
+			<a id="etc" class="col s12 m3" onclick="changeView(3, 4)"><p>Avishkar</p></a>
 		</div>
 
-		<div id="turbulence">
-			<div class="event block card">
-				<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
-				<h5 class="title">Robowars</h5>
-				<h6>Anshul Mahale: +91-8378002274</h6>
-				<h6>Dheep Caldeira +91-9975771511</h6>
+		<div id="dayonecontent">
+			<div id="turbulence">
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Robowars</h5>
+					<h6>Anshul Mahale: +91-8378002274</h6>
+					<h6>Dheep Caldeira +91-9975771511</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Roborace</h5>
+					<h6>Anish Naik +91-9168119346</h6>
+					<h6>Gurudas Naik +91-9921463637</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Bridge Building</h5>
+					<h6>Shivam Naik +91-9403059721</h6>
+					<h6>Paresh Parrikar +91-940414950</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Poster Presentation</h5>
+					<h6>Contact faculty</h6>
+				</div>
 			</div>
-			<div class="event block card">
-				<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
-				<h5 class="title">Roborace</h5>
-				<h6>Anish Naik +91-9168119346</h6>
-				<h6>Gurudas Naik +91-9921463637</h6>
+			<div id="mindspark">
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Mission Impossible</h5>
+					<h6>Wayne Gonsalves +91-7798632201</h6>
+					<h6>Magnus Fernandes +91-9637078086</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Weave the Web</h5>
+					<h6>Jude Silveira +91-9922022415</h6>
+					<h6>Nikhil Shetye +91-9637971759</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">E-Treaure Hunt</h5>
+					<h6>Shubham Modi +91-8975685906</h6>
+					<h6>Swapnali Dhawale +91-9049681544</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Debate</h5>
+					<h6>Aditya Bhosle +91-9762473774</h6>
+					<h6>Esha Madkaiker +91-8007629177</h6>
+				</div>
 			</div>
-			<div class="event block card">
-				<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
-				<h5 class="title">Bridge Building</h5>
-				<h6>Shivam Naik +91-9403059721</h6>
-				<h6>Paresh Parrikar +91-940414950</h6>
+			<div id="dotslash">
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Hackathon</h5>
+					<h6>Wayne Gonsalves +91-7798632201</h6>
+					<h6>Magnus Fernandes +91-9637078086</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Roborace</h5>
+					<h6>Jude Silveira +91-9922022415</h6>
+					<h6>Nikhil Shetye +91-9637971759</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Bridge Building</h5>
+					<h6>Shubham Modi +91-8975685906</h6>
+					<h6>Swapnali Dhawale +91-9049681544</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Poster Presentation</h5>
+					<h6>Aditya Bhosle +91-9762473774</h6>
+					<h6>Esha Madkaiker +91-8007629177</h6>
+				</div>
 			</div>
-			<div class="event block card">
-				<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
-				<h5 class="title">Poster Presentation</h5>
-				<h6>Contact faculty</h6>
+			<div id="avishkar">
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Line Follower</h5>
+					<h6>Saish Sawant +91-7083097959</h6>
+					<h6>Lincoln Alphonso +91-9923843953</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Dexter's Lab</h5>
+					<h6>Ramakrishna Mallah +91-8796304800</h6>
+					<h6>Pallavi Solanki +91-8308967427</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Electronic Arts</h5>
+					<h6>Prasanna Mhapsekar +91-9623856658</h6>
+					<h6>Avtar Chodankar +91-9881477042</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Robosoccer</h5>
+					<h6>Gaurav Gadekar +91-8087686059</h6>
+					<h6>Harshad Niralagi +91-9673777413</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">HardWired</h5>
+					<h6>Piyush Verma +91-7798684203</h6>
+					<h6>Royston Braganza +91-9881909565</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Poster Presentation</h5>
+					<h6>Sidarth Bansode +91-9923801068</h6>
+					<h6>Shaizad Shaikh +91-9860125134</h6>
+				</div>
 			</div>
 		</div>
-		<div id="mindspark">
-			<div class="event block card">
-				<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
-				<h5 class="title">Mission Impossible</h5>
-				<h6>Wayne Gonsalves +91-7798632201</h6>
-				<h6>Magnus Fernandes +91-9637078086</h6>
+		<div id="daytwocontent">
+			<div id="turbulence1">
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Robowars</h5>
+					<h6>Anshul Mahale: +91-8378002274</h6>
+					<h6>Dheep Caldeira +91-9975771511</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Roborace</h5>
+					<h6>Anish Naik +91-9168119346</h6>
+					<h6>Gurudas Naik +91-9921463637</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Bridge Building</h5>
+					<h6>Shivam Naik +91-9403059721</h6>
+					<h6>Paresh Parrikar +91-940414950</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Poster Presentation</h5>
+					<h6>Contact faculty</h6>
+				</div>
 			</div>
-			<div class="event block card">
-				<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
-				<h5 class="title">Weave the Web</h5>
-				<h6>Jude Silveira +91-9922022415</h6>
-				<h6>Nikhil Shetye +91-9637971759</h6>
+			<div id="mindspark1">
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Weave the Web</h5>
+					<h6>Jude Silveira +91-9922022415</h6>
+					<h6>Nikhil Shetye +91-9637971759</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">E-Treaure Hunt</h5>
+					<h6>Shubham Modi +91-8975685906</h6>
+					<h6>Swapnali Dhawale +91-9049681544</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Debate</h5>
+					<h6>Aditya Bhosle +91-9762473774</h6>
+					<h6>Esha Madkaiker +91-8007629177</h6>
+				</div>
 			</div>
-			<div class="event block card">
-				<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
-				<h5 class="title">E-Treaure Hunt</h5>
-				<h6>Shubham Modi +91-8975685906</h6>
-				<h6>Swapnali Dhawale +91-9049681544</h6>
+			<div id="dotslash1">
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Hackathon</h5>
+					<h6>Wayne Gonsalves +91-7798632201</h6>
+					<h6>Magnus Fernandes +91-9637078086</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Roborace</h5>
+					<h6>Jude Silveira +91-9922022415</h6>
+					<h6>Nikhil Shetye +91-9637971759</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Bridge Building</h5>
+					<h6>Shubham Modi +91-8975685906</h6>
+					<h6>Swapnali Dhawale +91-9049681544</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Poster Presentation</h5>
+					<h6>Aditya Bhosle +91-9762473774</h6>
+					<h6>Esha Madkaiker +91-8007629177</h6>
+				</div>
 			</div>
-			<div class="event block card">
-				<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
-				<h5 class="title">Debate</h5>
-				<h6>Aditya Bhosle +91-9762473774</h6>
-				<h6>Esha Madkaiker +91-8007629177</h6>
-			</div>
-		</div>
-		<div id="dotslash">
-			<div class="event block card">
-				<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
-				<h5 class="title">Hackathon</h5>
-				<h6>Wayne Gonsalves +91-7798632201</h6>
-				<h6>Magnus Fernandes +91-9637078086</h6>
-			</div>
-			<div class="event block card">
-				<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
-				<h5 class="title">Roborace</h5>
-				<h6>Jude Silveira +91-9922022415</h6>
-				<h6>Nikhil Shetye +91-9637971759</h6>
-			</div>
-			<div class="event block card">
-				<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
-				<h5 class="title">Bridge Building</h5>
-				<h6>Shubham Modi +91-8975685906</h6>
-				<h6>Swapnali Dhawale +91-9049681544</h6>
-			</div>
-			<div class="event block card">
-				<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
-				<h5 class="title">Poster Presentation</h5>
-				<h6>Aditya Bhosle +91-9762473774</h6>
-				<h6>Esha Madkaiker +91-8007629177</h6>
-			</div>
-		</div>
-		<div id="avishkar">
-			<div class="event block card">
-				<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
-				<h5 class="title">Line Follower</h5>
-				<h6>Saish Sawant +91-7083097959</h6>
-				<h6>Lincoln Alphonso +91-9923843953</h6>
-			</div>
-			<div class="event block card">
-				<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
-				<h5 class="title">Dexter's Lab</h5>
-				<h6>Ramakrishna Mallah +91-8796304800</h6>
-				<h6>Pallavi Solanki +91-8308967427</h6>
-			</div>
-			<div class="event block card">
-				<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
-				<h5 class="title">Electronic Arts</h5>
-				<h6>Prasanna Mhapsekar +91-9623856658</h6>
-				<h6>Avtar Chodankar +91-9881477042</h6>
-			</div>
-			<div class="event block card">
-				<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
-				<h5 class="title">Robosoccer</h5>
-				<h6>Gaurav Gadekar +91-8087686059</h6>
-				<h6>Harshad Niralagi +91-9673777413</h6>
-			</div>
-			<div class="event block card">
-				<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
-				<h5 class="title">HardWired</h5>
-				<h6>Piyush Verma +91-7798684203</h6>
-				<h6>Royston Braganza +91-9881909565</h6>
-			</div>
-			<div class="event block card">
-				<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
-				<h5 class="title">Poster Presentation</h5>
-				<h6>Sidarth Bansode +91-9923801068</h6>
-				<h6>Shaizad Shaikh +91-9860125134</h6>
+			<div id="avishkar1">
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Line Follower</h5>
+					<h6>Saish Sawant +91-7083097959</h6>
+					<h6>Lincoln Alphonso +91-9923843953</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Dexter's Lab</h5>
+					<h6>Ramakrishna Mallah +91-8796304800</h6>
+					<h6>Pallavi Solanki +91-8308967427</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Electronic Arts</h5>
+					<h6>Prasanna Mhapsekar +91-9623856658</h6>
+					<h6>Avtar Chodankar +91-9881477042</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Robosoccer</h5>
+					<h6>Gaurav Gadekar +91-8087686059</h6>
+					<h6>Harshad Niralagi +91-9673777413</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">HardWired</h5>
+					<h6>Piyush Verma +91-7798684203</h6>
+					<h6>Royston Braganza +91-9881909565</h6>
+				</div>
+				<div class="event block card">
+					<h5 class="inline"><i class="material-icons">alarm_on</i></h5><p class="inline">08:00 - 08:45</p>
+					<h5 class="title">Poster Presentation</h5>
+					<h6>Sidarth Bansode +91-9923801068</h6>
+					<h6>Shaizad Shaikh +91-9860125134</h6>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -166,5 +315,6 @@
 	</footer>
 	<script src="../lib/jquery.min.js"></script>
 	<script src="../js/materialize.min.js"></script>
+	<script src="../js/schedule.js"></script>
 </body>
 </html>

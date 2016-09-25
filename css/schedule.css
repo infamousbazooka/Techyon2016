@@ -12,6 +12,13 @@ h1,h2,h3,h4,h5,h6{
 p{
 	font-size: 1.3em;
 }
+.loaded{
+	overflow: auto !important;
+}
+.loaded .loader{
+	transform: translateY(-100%);
+	transition: all .5s ease-in-out;
+}
 .heading{
 	margin-top: 5%;
 }
@@ -64,6 +71,9 @@ body{
 	background-color: #0d1d31;
 	padding: 4%;
 }
+.day .active h6{
+	color: #dc143c;
+}
 .events .col{
 	text-align: center;
 	padding: 0;
@@ -76,7 +86,7 @@ body{
 	background-color: #fafafa;
 	padding: 4%;
 }
-.events p.active{
+.events .active p{
 	background-color: #dc143c;
 	color: #fafafa;
 }
