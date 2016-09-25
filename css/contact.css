@@ -6,14 +6,12 @@
 	font-family: 'Righteous', cursive;
 }
 h1,h2,h3,h4,h5,h6{
-	color: #fafafa;
 	font-weight: bold;
 	letter-spacing: 2px;
 }
 ul,li,ol,a{
 	text-decoration: none;
 	list-style: none;
-	color: #333;
 }
 p{
 	color: #fafafa;
@@ -81,6 +79,9 @@ footer h6{
 .btn:hover{
 	background-color: #dd153d;
 }
+.title{
+	color: #fafafa;
+}
 form{
 	margin: 4% 0 !important;
 	padding: 20px !important;
@@ -90,6 +91,20 @@ form{
 }
 footer{
 	background-color: #0d1d31 !important;
+}
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]),textarea.materialize-textarea:focus:not([readonly]) {
+	border-bottom: 1px solid #dc143c;
+	box-shadow: 0 1px 0 0 #dc143c;
+}
+input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([readonly])+label, input[type=password]:focus:not([readonly])+label, input[type=email]:focus:not([readonly])+label, input[type=url]:focus:not([readonly])+label, input[type=time]:focus:not([readonly])+label, input[type=date]:focus:not([readonly])+label, input[type=datetime]:focus:not([readonly])+label, input[type=datetime-local]:focus:not([readonly])+label, input[type=tel]:focus:not([readonly])+label, input[type=number]:focus:not([readonly])+label, input[type=search]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label{
+	color: #dc143c;
+}
+.input-field .prefix.active{
+	color: #dc143c;
+}
+#snarl-title, .snarl-text{
+	font-weight: bold;
+	color: #0d1d31 !important;
 }
 @media only screen and (max-width:1024px) {
 	.content{
@@ -102,6 +117,7 @@ footer{
 		padding: 10px;
 	}
 	footer h6{
+		color: #fafafa;
 		width: 100%;
 	}
 	footer .righttext{
