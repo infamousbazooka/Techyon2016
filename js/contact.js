@@ -13,6 +13,7 @@ function preloader() {
 	}
 }
 function showContent(){
+	$('html').addClass('loaded');
 	$('body').addClass('loaded');
 }
 window.onload = preloader;
