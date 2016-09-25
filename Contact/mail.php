@@ -5,7 +5,7 @@
 	$email = $_POST['email'];
 	$contact = $_POST['contact'];
 	$message = $_POST['message'];
-	$tos = ["magnsfernandes1295@gmail.com"];
+	$tos = ["magnusfernandes1295@gmail.com", "amodshinde1995@gmail.com"];
 	for ($i=0; $i < 1; $i++) { 
 		$body = "Hello Techyon!! I am " . $name . ", my email address is " . $email . " and my contact number is " . $contact . ". My message to you is :\n" . $message;
 		$subject="Techyon Contact";
