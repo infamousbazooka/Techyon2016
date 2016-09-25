@@ -10,6 +10,54 @@
 	<link rel="stylesheet" href="../../css/event.css">
 </head>
 <body>
+	<div class="loader">
+		<svg></svg>
+	</div>
+	<style>
+		html,body{
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+		}
+		.loader{
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 99999;
+			width: 100%;
+			height: 100%;
+			background-color: #fafafa;
+		}
+		svg {
+			position: absolute;
+			width: 400px;
+			height: 400px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		line {
+			stroke-width: 2.5;
+		}
+	</style>
+	<script src="../../js/TweenLite.min.js"></script>
+	<script src="../../js/TweenMax.min.js"></script>
+	<script>
+		"use strict";function createPoint(a){var b=document.createElementNS(svgns,"circle");root.appendChild(b);var c=random(75,125);return TweenLite.set(b,{attr:{r:2.5,fill:a},x:random(-twoPi,twoPi),y:random(-twoPi,twoPi)}),TweenMax.to(b,random(2,6),{x:"+="+twoPi,repeat:-1,modifiers:{x:function(b){return cx+Math.cos(b)*c}}}),TweenMax.to(b,random(2,6),{y:"+="+twoPi,repeat:-1,modifiers:{y:function(b){return cy+Math.sin(b)*c}}}),b._gsTransform}function createLine(a,b,c){var d=document.createElementNS(svgns,"line");root.appendChild(d),TweenLite.set(d,{alpha:b,stroke:c,x:cx,y:cy});var e=d._gsTransform;return TweenMax.to(d,1e3,{x:"+=1",y:"+=1",repeat:-1,modifiers:{x:function(c){return c=e.x+(a.x-e.x)*ease,d.setAttribute("x2",a.x-c),c},y:function(c){return c=e.y+(a.y-e.y)*ease,d.setAttribute("y2",a.y-c),c}}}),e}function random(a,b){return null==b&&(b=a,a=0),Math.random()*(b-a)+a}TweenLite.defaultEase=Linear.easeNone;var cx=200,cy=200,svgns="http://www.w3.org/2000/svg",root=document.querySelector("svg"),twoPi=2*Math.PI,ease=.35,total=25,colors=["#EA4335","#FBBC05","#34A853","#4285F4"];colors.forEach(function(a){for(var b=createPoint(a),c=total;c--;){var d=(c+1)/total;b=createLine(b,d,a)}}),TweenLite.from("line, circle",1.5,{alpha:0});
+	</script>
+	<div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
+		<a class="btn-floating btn-large red">
+			<i class="material-icons">menu</i>
+		</a>
+		<ul>
+			<li><a href="../../" class="btn-floating red"><i class="material-icons">home</i></a></li>
+			<li><a href="../../Events/" class="btn-floating red"><i class="material-icons">polymer</i></a></li>
+			<li><a href="../../Schedule/" class="btn-floating red"><i class="material-icons">today</i></a></li>
+			<li><a href="../../Contact/" class="btn-floating red"><i class="material-icons">email</i></a></li>
+			<li><a href="../../Team/" class="btn-floating red"><i class="material-icons">supervisor_account</i></a></li>
+		</ul>
+	</div>
 	<div class="wrapper">
 		<div class="row">
 			<div class="col s12 m3">
@@ -20,7 +68,7 @@
 					<div class="card-content">
 						<span class="card-title activator grey-text text-darken-4">Line Follower<i class="material-icons right">more_vert</i></span>
 						<a target="_blank" class="waves-effect waves-light btn" href="rules/linefollower.docx">Download Rules</a>
-						<a target="_blank" class="waves-effect waves-light btn red" href="#">Register</a>
+						<a target="_blank" class="waves-effect waves-light btn red" href="https://goo.gl/forms/3nt6WjtGggz2NEe63">Register</a>
 					</div>
 					<div class="card-action">
 						<a href="callto:+917083097959">Saish Sawant - +917083097959</a>
@@ -29,7 +77,7 @@
 					</div>
 					<div class="card-reveal">
 						<span class="card-title grey-text text-darken-4">Line Follower<i class="material-icons right">close</i></span>
-						<p>Ethan hunt needs help. IMF recruiting a task force. Complete each task in minimum amount of time to stop the syndicate from launching a global attack. Do you have the ability to help Ethan hunt?</p>
+						<p>Code a robot which follows the track and finishes the fastest to win the event.</p>
 						<br>
 					</div>
 				</div>
@@ -42,7 +90,7 @@
 					<div class="card-content">
 						<span class="card-title activator grey-text text-darken-4">Dexter's Lab<i class="material-icons right">more_vert</i></span>
 						<a target="_blank" class="waves-effect waves-light btn" href="rules/dexterslab.docx">Download Rules</a>
-						<a target="_blank" class="waves-effect waves-light btn red" href="#">Register</a>
+						<a target="_blank" class="waves-effect waves-light btn red" href="https://goo.gl/forms/eLGaLPczhvSEf2D33">Register</a>
 					</div>
 					<div class="card-action">
 						<a href="callto:+918796304800">RAMKRISHNA MALLAH - +918796304800</a>
@@ -51,7 +99,7 @@
 					</div>
 					<div class="card-reveal">
 						<span class="card-title grey-text text-darken-4">Dexter's Lab<i class="material-icons right">close</i></span>
-						<p>Customize, animate and illustrate. The screen is your canvas, let your imagination play. Get your mind and hand in sync, and let the brush do its thing.</p>
+						<p>An event to judge the first years technical as well as practical knowledge. Score the maximum marks to win the Dexters Lab prizes.</p>
 					</div>
 				</div>
 			</div>
@@ -63,7 +111,7 @@
 					<div class="card-content">
 						<span class="card-title activator grey-text text-darken-4">Electronic Arts<i class="material-icons right">more_vert</i></span>
 						<a target="_blank" class="waves-effect waves-light btn" href="rules/electronicarts.docx">Download Rules</a>
-						<a target="_blank" class="waves-effect waves-light btn red" href="#">Register</a>
+						<a target="_blank" class="waves-effect waves-light btn red" href="https://goo.gl/forms/rX3oyBPK8ZP9eNcE3">Register</a>
 					</div>
 					<div class="card-action">
 						<a href="callto:+919623856658">Prasanna Mhapsekar - +919623856658</a>
@@ -72,7 +120,7 @@
 					</div>
 					<div class="card-reveal">
 						<span class="card-title grey-text text-darken-4">Electronic Arts<i class="material-icons right">close</i></span>
-						<p>Customize, animate and illustrate. The screen is your canvas, let your imagination play. Get your mind and hand in sync, and let the brush do its thing.</p>
+						<p>The idea is to make a model or an arrangement using LED’s and electronic components and present your idea in accordance to the theme.</p>
 					</div>
 				</div>
 			</div>
@@ -84,7 +132,7 @@
 					<div class="card-content">
 						<span class="card-title activator grey-text text-darken-4">RoboSoccer<i class="material-icons right">more_vert</i></span>
 						<a target="_blank" class="waves-effect waves-light btn" href="rules/robosoccer.docx">Download Rules</a>
-						<a target="_blank" class="waves-effect waves-light btn red" href="#">Register</a></p>
+						<a target="_blank" class="waves-effect waves-light btn red" href="https://goo.gl/forms/fYuumW1jRGKKB8E72">Register</a></p>
 					</div>
 					<div class="card-action">
 						<a href="callto:+918087686059">Gaurav Gadekar - +918087686059</a>
@@ -93,18 +141,7 @@
 					</div>
 					<div class="card-reveal">
 						<span class="card-title grey-text text-darken-4">RoboSoccer<i class="material-icons right">close</i></span>
-						<p>Each person has a role to play based on analysing & logically thinking about eachclue they get. "JUST GOOGLE OUT", the most common phrase used by students has the key to each clue. The participants will have to work like a team of Fantastic Four. Combining the abilities that will lead them to the winning clue.</p>
-						<br>
-						<h5><u>Rules:</u></h5>
-						<ol>
-							<li>Each team consist of 4 members.</li>
-							<li>Each teams needs a phone with a net pack and share it.</li>
-							<li>Clues will be placed at different ends of college which can be solved using internet.</li>
-							<li>Each solution of the clue will need a task to be completed. At the end of the task the next clue will be revealed.</li>
-							<li>All the members of the team should be together at each clue. Otherwise the team will be disqualified.</li>
-							<li>There will be many loop holes and dead ends if the clues aren’t solved properly.</li>
-							<li>The first team to reach the end note wins.</li>
-						</ol>
+						<p>Robots play Soccer! Face off against other robot to be the <b>ROBOSOCCER CHAMPION.</b></p>
 					</div>
 				</div>
 			</div>
@@ -116,7 +153,7 @@
 					<div class="card-content">
 						<span class="card-title activator grey-text text-darken-4">HardWired<i class="material-icons right">more_vert</i></span>
 						<a target="_blank" class="waves-effect waves-light btn" href="rules/hardwired.docx">Download Rules</a>
-						<a target="_blank" class="waves-effect waves-light btn red" href="#">Register</a>
+						<a target="_blank" class="waves-effect waves-light btn red" href="https://goo.gl/forms/p8dgVVmOqwu41kK82">Register</a>
 					</div>
 					<div class="card-action">
 						<a href="callto:+917798684203">Piyush Verma - +917798684203</a>
@@ -125,33 +162,27 @@
 					</div>
 					<div class="card-reveal">
 						<span class="card-title grey-text text-darken-4">HardWired<i class="material-icons right">close</i></span>
-						<p>Given a complex technology, explain it in your own way so that even your Grandma can understand. Make a presentation, let the ideas fly. Get your facts right and prove yourself.</p>
+						<p>Got something innovative & creative? This is the event you looking for! Showcase your game changing projects based on Microcontrollers, Raspberry Pi, etc.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col s12 m3">
+				<div class="card">
+					<div class="card-image waves-effect waves-block waves-light">
+						<img class="activator img-responsive" src="images/posterpresentation.jpg" >
+					</div>
+					<div class="card-content">
+						<span class="card-title activator grey-text text-darken-4">Poster Presentation<i class="material-icons right">more_vert</i></span>
+						<a target="_blank" class="waves-effect waves-light btn" href="rules/posterpresentation.docx">Download Rules</a>
+					</div>
+					<div class="card-action">
+						<a href="callto:+919923801068">Sidarth Bansode - +919923801068</a>
 						<br>
-						<h5><u>Rules:</u></h5>
-						<ol>
-							<li>Two members per team.</li>
-							<li>Both members strictly from the same college.</li>
-							<li>Participants are required to carry their college id cards.</li>
-							<li>Participants need to confirm registration on the day of the event.</li>
-							<li>Report before 10:30 am on 3rd Floor for the same.</li>
-						</ol>
-						<br>
-						<h5><u>Round 1: Dumb-It-Down</u></h5>
-						<ol>
-							<li>A complex technology will be given, dumb it down and present.</li>
-							<li>Topics will be given when the teams report.</li>
-							<li>Enough time and internet access will be provided.</li>
-							<li>Maximum presentation time is 5 mins per team (includes questions from the judges).</li>
-						</ol>
-						<br>
-						<h5><u>Round 2: Tech-Debate</u></h5>
-						<ol>
-							<li>Opening Statement of each team (4 mins each).</li>
-							<li>Cross-questioning between teams (2 mins each).</li>
-							<li>Questions from Judges (5 mins).</li>
-							<li>Closing statements from each of the debaters (2 mins).</li>
-							<li>Top 2 teams qualify for FINAL Round.</li>
-						</ol>
+						<a href="callto:+919860125134">Shaizad Shaikh - +919860125134</a>
+					</div>
+					<div class="card-reveal">
+						<span class="card-title grey-text text-darken-4">Poster Presentation<i class="material-icons right">close</i></span>
+						<p>Got something innovative & creative? Showcase your idea and convey its benefits and advantages through a poster.</p>
 					</div>
 				</div>
 			</div>
@@ -165,5 +196,6 @@
 	</div>
 <script src="../../lib/jquery.min.js"></script>
 <script src="../../js/materialize.min.js"></script>
+<script src="../../js/event.js"></script>
 </body>
 </html>

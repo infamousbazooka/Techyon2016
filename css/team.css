@@ -15,6 +15,13 @@ p{
 h6, p{
 	color: #fafafa !important;
 }
+.loaded{
+	overflow: auto !important;
+}
+.loaded .loader{
+	transform: translateY(-100%);
+	transition: all .5s ease-in-out;
+}
 .red{
 	background-color: #fafafa !important;
 }
@@ -82,5 +89,8 @@ footer{
 @media only screen and (max-width:1024px) {
 	footer .righttext{
 		display: none;
+	}
+	.fixed-action-btn.horizontal ul li{
+		margin: 10px 5px 0 0;
 	}
 }
