@@ -35,6 +35,10 @@ $('#send').click(function(event) {
 					title: 'Message Recorded.',
 					text: 'Thank you for your feedback. We will get back to you shortly.'
 				});
+				$('#name').val("");
+				$('#email').val("");
+				$('#contact').val("");
+				$('#message').val("");
 			} else{
 				Snarl.addNotification({
 					title: 'Error.',
