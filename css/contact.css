@@ -19,6 +19,13 @@ p{
 	color: #fafafa;
 	font-size: 1.3em;
 }
+.loaded{
+	overflow: auto !important;
+}
+.loaded .loader{
+	transform: translateY(-100%);
+	transition: all .5s ease-in-out;
+}
 .block{
 	display: block;
 }
@@ -99,5 +106,8 @@ footer{
 	}
 	footer .righttext{
 		display: none;
+	}
+	.fixed-action-btn.horizontal ul li{
+		margin: 10px 5px 0 0;
 	}
 }

@@ -10,16 +10,52 @@
 	<link rel="stylesheet" href="../../css/event.css">
 </head>
 <body>
+	<div class="loader">
+		<svg></svg>
+	</div>
+	<style>
+		html,body{
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+		}
+		.loader{
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 99999;
+			width: 100%;
+			height: 100%;
+			background-color: #fafafa;
+		}
+		svg {
+			position: absolute;
+			width: 400px;
+			height: 400px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		line {
+			stroke-width: 2.5;
+		}
+	</style>
+	<script src="../../js/TweenLite.min.js"></script>
+	<script src="../../js/TweenMax.min.js"></script>
+	<script>
+		"use strict";function createPoint(a){var b=document.createElementNS(svgns,"circle");root.appendChild(b);var c=random(75,125);return TweenLite.set(b,{attr:{r:2.5,fill:a},x:random(-twoPi,twoPi),y:random(-twoPi,twoPi)}),TweenMax.to(b,random(2,6),{x:"+="+twoPi,repeat:-1,modifiers:{x:function(b){return cx+Math.cos(b)*c}}}),TweenMax.to(b,random(2,6),{y:"+="+twoPi,repeat:-1,modifiers:{y:function(b){return cy+Math.sin(b)*c}}}),b._gsTransform}function createLine(a,b,c){var d=document.createElementNS(svgns,"line");root.appendChild(d),TweenLite.set(d,{alpha:b,stroke:c,x:cx,y:cy});var e=d._gsTransform;return TweenMax.to(d,1e3,{x:"+=1",y:"+=1",repeat:-1,modifiers:{x:function(c){return c=e.x+(a.x-e.x)*ease,d.setAttribute("x2",a.x-c),c},y:function(c){return c=e.y+(a.y-e.y)*ease,d.setAttribute("y2",a.y-c),c}}}),e}function random(a,b){return null==b&&(b=a,a=0),Math.random()*(b-a)+a}TweenLite.defaultEase=Linear.easeNone;var cx=200,cy=200,svgns="http://www.w3.org/2000/svg",root=document.querySelector("svg"),twoPi=2*Math.PI,ease=.35,total=25,colors=["#EA4335","#FBBC05","#34A853","#4285F4"];colors.forEach(function(a){for(var b=createPoint(a),c=total;c--;){var d=(c+1)/total;b=createLine(b,d,a)}}),TweenLite.from("line, circle",1.5,{alpha:0});
+	</script>
 	<div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
 		<a class="btn-floating btn-large red">
 			<i class="material-icons">menu</i>
 		</a>
 		<ul>
-			<li><a href="../" class="btn-floating red"><i class="material-icons">home</i></a></li>
-			<li><a href="../Events/" class="btn-floating red"><i class="material-icons">polymer</i></a></li>
-			<li><a href="../Schedule/" class="btn-floating red"><i class="material-icons">today</i></a></li>
-			<li><a href="../Contact/" class="btn-floating red"><i class="material-icons">email</i></a></li>
-			<li><a href="../Team/" class="btn-floating red"><i class="material-icons">supervisor_account</i></a></li>
+			<li><a href="../../" class="btn-floating red"><i class="material-icons">home</i></a></li>
+			<li><a href="../../Events/" class="btn-floating red"><i class="material-icons">polymer</i></a></li>
+			<li><a href="../../Schedule/" class="btn-floating red"><i class="material-icons">today</i></a></li>
+			<li><a href="../../Contact/" class="btn-floating red"><i class="material-icons">email</i></a></li>
+			<li><a href="../../Team/" class="btn-floating red"><i class="material-icons">supervisor_account</i></a></li>
 		</ul>
 	</div>
 	<div class="wrapper">
@@ -163,5 +199,6 @@
 	</div>
 <script src="../../lib/jquery.min.js"></script>
 <script src="../../js/materialize.min.js"></script>
+<script src="../js/event.js"></script>
 </body>
 </html>

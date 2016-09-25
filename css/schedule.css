@@ -74,6 +74,10 @@ body{
 .day .active h6{
 	color: #dc143c;
 }
+.events{
+	border-left: 2px solid #0d1d31;
+	border-right: 2px solid #0d1d31;
+}
 .events .col{
 	text-align: center;
 	padding: 0;
@@ -109,6 +113,9 @@ footer{
 	background-color: #0d1d31 !important;
 }
 @media only screen and (max-width:1024px) {
+	.fixed-action-btn.horizontal ul li{
+		margin: 10px 5px 0 0;
+	}
 	footer .righttext{
 		display: none;
 	}
