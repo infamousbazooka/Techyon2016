@@ -1,24 +1,337 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Hackathon</title>
-	<link rel="stylesheet" type="text/css" href="hackathon.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>PSL presents Hackathon</title>
+  <!-- JQUERY -->
+   <!-- <script src="./js/jquery.min.js"></script> -->
+  <!-- <script src="./js/typed.js-master/js/typed.js"></script>÷ -->
 
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-          
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+ <!-- <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet"> -->
 </head>
-<body >
+<body>
+<div class="navbar-fixed">
+  <nav class="white " role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Hackathon</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#sponsor">Sponsors</a></li>
+        <li><a href="#what">What?</a></li>
+        <li><a href="#where">Where?</a></li>
+        <li><a href="#when">When</a></li>
+        <li><a href="#rules">Rules</a></li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#faq">FAQs</a></li>
+      </ul>
 
-
-<div class="parallax-container">
-      <div class="parallax"><img src="https://www.google.co.in/imgres?imgurl=https%3A%2F%2Fa2ua.com%2Fhello%2Fhello-006.jpg&imgrefurl=https%3A%2F%2Fa2ua.com%2Fhello.html&docid=6QR8MBcVb_Ls0M&tbnid=iomKndCSemKr5M%3A&w=1920&h=1080&safe=off&client=ubuntu&bih=613&biw=1319&ved=0ahUKEwj2qJL2zqjPAhVIfxoKHSyNCfwQMwgzKAEwAQ&iact=mrc&uact=8"></div>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#sponsor">Sponsors</a></li>
+        <li><a href="#what">What?</a></li>
+        <li><a href="#where">Where?</a></li>
+        <li><a href="#when">When</a></li>
+        <li><a href="#rules">Rules</a></li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#faq">FAQs</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
-        
+  </nav>
+  </div>
 
-<script type="text/javascript" src="hackathon.js"></script>
-</body>
+  <div id="index-banner" class="parallax-container">
+    <!-- <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div> -->
+     <script>
+                         $(function(){
+                  $(".element").typed({
+                    strings: ["powered by Persistent Systems Ltd_.", "THINK. DESIGN. CODE._"],
+                    typeSpeed: 0
+                  });
+              });
+
+            </script>
+
+        
+    <div id="sponsor" class=" parallax"><img src="hackathon1.png" alt="Unsplashed background img 1"></div>
+    
+  </div>
+
+<div class="center">
+    <h4 class="header center text-lighten-2">Sponsored by</h4>
+    <img width="50%" src="psl.jpg" alt="Unsplashed background img 1">
+</div>
+<br>
+<br>
+<hr>
+
+  <div class="container">
+    <div class="section">
+    <div class="element"></div>
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">invert_colors</i></h2>
+            <h5 class="center">Think</h5>
+
+           
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">perm_media</i></h2>
+            <h5 class="center">Design</h5>
+
+           
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">code</i></h2>
+            <h5 class="center">Code</h5>
+
+        
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div id="what" class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <!-- <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div> -->
+    </div>
+    <div class="parallax"><img src="hackathon3.png" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4 class="light">Sounds scary, right?</h4>
+          <p class="left-align light"> Don’t worry, it’s not that type of hacking.
+Over the past year, hackathons have taken the country by storm. You might have even seen a small one in “The Social Network.” No, we don’t break into your school’s computers. Yes, we do sometimes drink beer.</p><br>
+<p><i>
+“A hackathon, a hacker neologism, is an event when programmers meet to do collaborative computer programming.” -Wikipedia</i>
+</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div id="where">
+  <br>
+  <br>
+  <h2 class="center brown-text"><i class="material-icons">SO WHERE IS THIS HACKATHON?</i></h2>
+            <h5 class="center">Lab No 6, 2nd Floor, Computer Department.
+Padre Conceicao College of Engineering, Verna Goa</h5>
+<div class="center">
+<a class=" waves-effect waves-light btn" href="Contact/"> Go to CONTACT US page for location info</a>
+</div>
+    
+  </div>
+<br>
+<br>
+<br>
+<br>
+
+<div id="when">
+  <br>
+  <br>
+  <h2 class="center brown-text"><i class="material-icons"> WHEN?</i></h2>
+            <h5 class="center">6th & 7th October 2016</h5>
+
+            <h5 class="light center">Day 1: <br>
+            09.30am: Overview of Idea
+            <br><br>
+            5:00pm: Teams must Present what they have completed so far to the Judges.<br>
+                Filtering of Teams will take place at this time.
+                <br><br>
+            Day 2:<br>
+            10:00am: Presentation<br>
+                Teams will make a Presentation and Show a WORKING Demo of the Project to the judges.<br>
+            Each team will be allotted 5 minutes.</h5><br><br><br>
+</div>
+
+<div class="parallax-container valign-wrapper">
+    <!-- <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div> -->
+    <div class="parallax container"><img src="hackathon4.png" alt="Unsplashed background img 3"></div>
+  </div>
+<div class="center light">
+<div id="rules">
+
+ <h1>Rules</h1>
+<h5 class="light container">
+  <ul class=" hide-on-med-and-down">
+        <li> • The team size can be a maximum of 3 members<br></li>
+        <li> • Each team will get 5 minutes to present their solutions<br></li>
+        <li> • Each team will get 5 minutes to present their solutions<br></li>
+        <li> • Developed Solutions should be related to the theme. <br></li>
+        <li> • DEMO / WORKING CODE IS MANDATORY.<br></li>
+        <li> • Complete reuse of college projects or open source projects available online are prohibited<br></li>
+
+  </ul>
+</h5>
+</div>
+
+<div>
+<h1>Guidelines</h1>
+<h5 class="light center container">
+
+
+<ul class=" hide-on-med-and-down">
+        <li> • Teams need to COMPULSORILY be present at 9:30am where the Hackathon Theme will be told by the PSL Team and you get a chance to ask Questions regarding the Theme.<br></li>
+        <br><li> • If you are present later you will have to ask the Student coordinators of the Event regarding the Theme.<br></li>
+        <br><li> • Teams will also HAVE to come with their own Development Environment ie. Laptops etc.<br></li>
+        <br><li> • A power Strip will be handy.<br></li>
+        <br><li> • Internet connectivity will be provided at the Labs.<br></li>
+        <br><li> • Teams will have to check if their Hardware ie Laptops are compatible with the Projector BEFORE
+HAND.<br></li>
+        <br><li> • This is to ensure that there are no problems/incompatibility issues during the Presentation with the judges later. <br></li>
+
+  </ul>
+</h5>
+  </div>
+
+
+<h1 class="container">How to?</h1>
+<h5 class="light center container">
+Teams will have to sign up online via the Website.
+Registration can also be done at the Venue on Day 1 BEFORE 10AM.</h6>
+  
+
+  <h1>Platforms</h1>
+  <h5 class="light">
+  <ul>
+  <li>Web</li>
+      <li>Desktop</li> 
+      <li>Android</li> 
+      <li>iOs</li> 
+  </ul>
+</h5>
+
+<h1>Judging Criteria</h1>
+</div>
+
+<div id="faqs" class="container light">
+  <h1 class="center">FAQs</h1>
+   <ul class="center hide-on-med-and-down">
+        <li><p>I'm confused about the theme. How does it affect me?<br>
+The theme will be General Domain Based, It will be announced at the Venue on
+Day 1 on the spot.</p></li>
+         <li><p>Who can attend?<br>
+Any undergraduate student from any Engineering College in Goa.</p></li>
+          <li><p>Who can attend?<br>
+Any undergraduate student from any Engineering College in Goa.</p></li>
+          <li><p>Who can attend?<br>
+Any undergraduate student from any Engineering College in Goa.</p></li>
+          <li><p>What should I bring?<br>
+You MUST bring your student or government-issued ID for entry, and your laptop and
+charger. A Power Strip would come in handy!</p></li>
+          <li><p>Will there be any concrete problems to solve or will it be open-ended?<br>
+We will be providing you with problem statements a few Hours before the
+hackathon, to help you plan out what material from the inventory you will require.</p></li>
+          <li><p>My question isn't answered here!<br>
+Feel free to contact us!</p></li>
+    
+      </ul>
+
+</div>
+
+
+<div id="register" class="container center">
+  <h1>Register</h1>
+  <!-- Change the width and height values to suit you best -->
+<div class="typeform-widget" data-url="https://nishit6.typeform.com/to/kqnHU8" data-text="Event Registration" style="width:100%;height:500px;"></div>
+<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
+<div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"><a href="https://www.typeform.com/examples/forms/event-registration-template/?utm_campaign=kqnHU8&amp;utm_source=typeform.com-4647445-Basic&amp;utm_medium=typeform&amp;utm_content=typeform-embedded-eventregistration&amp;utm_term=EN" style="color: #999" target="_blank">Event registration form</a>powered by Typeform</div>
+</div>
+
+
+  
+
+  <!-- <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+ -->
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <!-- <script src="./js/jquery.min.js"></script> -->
+  <script src="./js/typed.js-master/js/typed.js"></script>
+
+  </body>
 </html>
