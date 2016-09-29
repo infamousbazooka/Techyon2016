@@ -144,7 +144,7 @@ footer h3:hover{
 		background-position: center;
 	}
 	.logo{
-		padding-top: 25%;
+		padding-top: 20px;
 	}
 	.logo li{
 		width: 10%;
@@ -168,5 +168,8 @@ footer h3:hover{
 		display: block !important;
 		background-color: #0d1d31;
 		padding-bottom: 10px;
+	}
+	.right{
+		width: 100%;
 	}
 }
