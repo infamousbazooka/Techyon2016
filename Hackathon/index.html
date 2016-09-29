@@ -147,7 +147,7 @@
 <!-- where and location info -->
   <div id="where">
    <div class="col s12 m7 l8 container">
-      <div class="card horizontal card_head pink">
+      <div class="card horizontal card_head  pink lighten-1">
           <h5 class="header" style="margin-left:50px">WHERE IS THIS HACKATHON?</h5>
       </div>
       <div class="card horizontal">
@@ -171,7 +171,7 @@
 <!-- when and  brief schedule -->
 <div id="when">
  <center>
-  <div class="col s12 m7 l8 container card horizontal card_head pink">
+  <div class="col s12 m7 l8 container card horizontal card_head  pink lighten-1">
     <h5 class="header" style="margin-left:50px ">WHEN?</h5>
   </div>
  </center> 
@@ -255,49 +255,99 @@ HAND.<br></li>
 <h5 class="light center container">
 Teams will have to sign up online via the Website.
 Registration can also be done at the Venue on Day 1 BEFORE 10AM.</h6>
-  
+ 
 
-  <h1>Platforms</h1>
-  <h5 class="light">
-  <ul>
-  <li>Web</li>
-      <li>Desktop</li> 
-      <li>Android</li> 
-      <li>iOs</li> 
+<div id="platforms">
+<center>
+   <div class="col s12 m7 container card horizontal card_head  pink lighten-1">
+      <h5 class="header" style="margin-left:50px ">Platforms</h5>
+  </div>
+</center>
+
+      <a class="btn-large" onclick="Materialize.toast('Android', 4000)"> &nbsp <i class="material-icons">android</i>&nbsp</a> &nbsp &nbsp &nbsp 
+      <a class="btn-large" onclick="Materialize.toast('Web', 4000)">&nbsp <i class="material-icons">web</i>&nbsp</a> &nbsp &nbsp &nbsp 
+      <a class="btn-large" onclick="Materialize.toast('iOS', 4000)">&nbsp <i class="material-icons">perm_device_information</i>&nbsp</a> &nbsp &nbsp &nbsp 
+      <a class="btn-large" onclick="Materialize.toast('Desktop', 4000)">&nbsp <i class="material-icons">picture_in_picture</i>&nbsp</a> &nbsp &nbsp &nbsp 
+     
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<script >
+  $(document).ready(function(){
+    $('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
+  });
+       
+</script>
+
+
+<div id="faqs" class="container light document">
+    <center>
+      <div class="col s12 m7 card horizontal card_head  pink lighten-1">
+        <h5 class="header" style="margin-left:50px ">FAQs</h5>
+      </div>
+    </center>
+    <ul class="collapsible popout" data-collapsible="accordion">
+
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">filter_drama</i>I'm confused about the theme. How does it affect me?
+          </div>
+          <div class="collapsible-body">
+            <p>The theme will be General Domain Based, It will be announced at the Venue on
+              Day 1 on the spot.</p>
+          </div>
+        </li>
+
+
+        <li>
+          <div class="collapsible-header"><i class="material-icons">place</i>Who can attend?</div>
+          <div class="collapsible-body"><p>Any undergraduate student from any Engineering College in Goa.</p></div>
+        </li>
+
+
+        <li>
+          <div class="collapsible-header"><i class="material-icons">whatshot</i>What should I carry with me?</div>
+          <div class="collapsible-body">
+              <p>You MUST bring your student or government-issued ID for entry, and your laptop and
+                  charger. A Power Strip would come in handy!
+              </p>
+         </div>
+        </li>
+
+        <li>
+          <div class="collapsible-header"><i class="material-icons">android</i>
+                Will there be any concrete problems to solve or will it be open-ended?
+          </div>
+          <div class="collapsible-body">
+              <p>We will be providing you with problem statements a few Hours before the
+                hackathon, to help you plan out what material from the inventory you will require.
+              </p>
+         </div>
+        </li>
+
+         <li>
+          <div class="collapsible-header"><i class="material-icons">phone</i>My question wasnt answered.</div>
+          <div class="collapsible-body"><p>Feel Free to contact us.</p></div>
+        </li>
   </ul>
-</h5>
-
-<h1>Judging Criteria</h1>
 </div>
-
-<div id="faqs" class="container light">
-  <h1 class="center">FAQs</h1>
-   <ul class="center hide-on-med-and-down">
-        <li><p>I'm confused about the theme. How does it affect me?<br>
-The theme will be General Domain Based, It will be announced at the Venue on
-Day 1 on the spot.</p></li>
-         <li><p>Who can attend?<br>
-Any undergraduate student from any Engineering College in Goa.</p></li>
-          <li><p>Who can attend?<br>
-Any undergraduate student from any Engineering College in Goa.</p></li>
-          <li><p>Who can attend?<br>
-Any undergraduate student from any Engineering College in Goa.</p></li>
-          <li><p>What should I bring?<br>
-You MUST bring your student or government-issued ID for entry, and your laptop and
-charger. A Power Strip would come in handy!</p></li>
-          <li><p>Will there be any concrete problems to solve or will it be open-ended?<br>
-We will be providing you with problem statements a few Hours before the
-hackathon, to help you plan out what material from the inventory you will require.</p></li>
-          <li><p>My question isn't answered here!<br>
-Feel free to contact us!</p></li>
-    
-      </ul>
-
-</div>
-
+<br>
+<br>
+<br>
 
 <div id="register" class="container center">
-  <h1>Register</h1>
+ <center>
+      <div class="col s12 m7 card horizontal card_head  pink lighten-1">
+        <h5 class="header" style="margin-left:50px ">Register</h5>
+      </div>
+    </center>
   <!-- Change the width and height values to suit you best -->
 <div class="typeform-widget" data-url="https://nishit6.typeform.com/to/kqnHU8" data-text="Event Registration" style="width:100%;height:500px;"></div>
   <script src="../lib/jquery.min.js"></script>
