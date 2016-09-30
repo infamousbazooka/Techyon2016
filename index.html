@@ -48,11 +48,6 @@
 	<script>
 		"use strict";function createPoint(a){var b=document.createElementNS(svgns,"circle");root.appendChild(b);var c=random(75,125);return TweenLite.set(b,{attr:{r:2.5,fill:a},x:random(-twoPi,twoPi),y:random(-twoPi,twoPi)}),TweenMax.to(b,random(2,6),{x:"+="+twoPi,repeat:-1,modifiers:{x:function(b){return cx+Math.cos(b)*c}}}),TweenMax.to(b,random(2,6),{y:"+="+twoPi,repeat:-1,modifiers:{y:function(b){return cy+Math.sin(b)*c}}}),b._gsTransform}function createLine(a,b,c){var d=document.createElementNS(svgns,"line");root.appendChild(d),TweenLite.set(d,{alpha:b,stroke:c,x:cx,y:cy});var e=d._gsTransform;return TweenMax.to(d,1e3,{x:"+=1",y:"+=1",repeat:-1,modifiers:{x:function(c){return c=e.x+(a.x-e.x)*ease,d.setAttribute("x2",a.x-c),c},y:function(c){return c=e.y+(a.y-e.y)*ease,d.setAttribute("y2",a.y-c),c}}}),e}function random(a,b){return null==b&&(b=a,a=0),Math.random()*(b-a)+a}TweenLite.defaultEase=Linear.easeNone;var cx=200,cy=200,svgns="http://www.w3.org/2000/svg",root=document.querySelector("svg"),twoPi=2*Math.PI,ease=.35,total=25,colors=["#EA4335","#FBBC05","#34A853","#4285F4"];colors.forEach(function(a){for(var b=createPoint(a),c=total;c--;){var d=(c+1)/total;b=createLine(b,d,a)}}),TweenLite.from("line, circle",1.5,{alpha:0});
 	</script>
-	 <nav>
-    <div class="nav-wrapper">
-      <H1 class="brand-logo left-align" style="color: #ffffff">Padre Conceicao college of Engineering presents</H1>
-    </div>
-  </nav>
 	<section class="home">
 		<div class="mainwrapper">
 			<div class="menu">
@@ -70,6 +65,8 @@
 			</footer>
 		</div>
 		<div class="logo">
+			<h1>Padre Conceição College Of Engineering</h1>
+			<h2>presents</h2>
 			<ul class="block">
 				<li class="inline"><img id="t" src="images/techyon/t.png"></li>
 				<li class="inline"><img id="e" src="images/techyon/e.png"></li>
@@ -85,12 +82,8 @@
 		<!-- <a href="Hackathon/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
 		 -->
 
-		<section class="socialcontainer">			
-			<br>
-			<br>
-			<br>
-			
-			<div class="inline social social-fb block">
+		<section class="socialcontainer">
+			<div class="social social-fb block">
 				<a href="http://www.facebook.com/pccetechyon">
 					<h2 class="inline"><i class="fa fa-facebook"></i></h2>
 					<h3 class="inline">Facebook</h3>

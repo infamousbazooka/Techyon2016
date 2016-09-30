@@ -81,10 +81,13 @@ canvas{
 .logo{
 	position: relative;
 	z-index: 3;
-	-ms-transform: translateY(50%);
-	-webkit-transform: translateY(50%);
-	transform: translateY(50%);
 	padding-top: 50px;
+}
+.logo h1{
+	margin-bottom: 10px;
+}
+.logo h2{
+	margin-bottom: 20px;
 }
 .socialcontainer{
 	position: fixed;
