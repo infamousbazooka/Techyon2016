@@ -204,6 +204,29 @@
 </div>
 
 
+<script>
+   var options = [
+    {selector: '.ruleclass', offset: 200, callback: customCallbackFunc } },
+    {selector: '.other-class', offset: 200, callback: function() {
+      customCallbackFunc();
+    } },
+  ];
+  Materialize.scrollFire(options);
+        
+</script>
+
+
+<script >
+  var options = [
+    {selector: '#rules', offset: 50, callback: 'Materialize.toast("This is our ScrollFire Demo!", 1500 )' },
+    {selector: '#rules', offset: 205, callback: 'Materialize.toast("Please continue scrolling!", 1500 )' },
+    {selector: '#rules', offset: 400, callback: 'Materialize.showStaggeredList("#rules")' },
+    {selector: '#image-test', offset: 500, callback: 'Materialize.fadeInImage("#image-test")' }
+  ];
+  Materialize.scrollFire(options);
+      
+</script>
+
 <div class="parallax-container valign-wrapper">
     <!-- <div class="section no-pad-bot">
       <div class="container">
@@ -216,16 +239,16 @@
   </div>
 <div class="center light">
 <div id="rules">
-
+<a href="#!" class="btn" onclick="Materialize.showStaggeredList('#rules')">Click Me</a>
  <h1>Rules</h1>
 <h5 class="light container">
-  <ul class=" hide-on-med-and-down">
-        <li> • The team size can be a maximum of 3 members<br></li>
-        <li> • Each team will get 5 minutes to present their solutions<br></li>
-        <li> • Each team will get 5 minutes to present their solutions<br></li>
-        <li> • Developed Solutions should be related to the theme. <br></li>
-        <li> • DEMO / WORKING CODE IS MANDATORY.<br></li>
-        <li> • Complete reuse of college projects or open source projects available online are prohibited<br></li>
+  <ul class=" hide-on-med-and-down ruleclass" id="rules" >
+        <li > • The team size can be a maximum of 3 members<br></li>
+        <li > • Each team will get 5 minutes to present their solutions<br></li>
+        <li > • Each team will get 5 minutes to present their solutions<br></li>
+        <li > • Developed Solutions should be related to the theme. <br></li>
+        <li > • DEMO / WORKING CODE IS MANDATORY.<br></li>
+        <li > • Complete reuse of college projects or open source projects available online are prohibited<br></li>
 
   </ul>
 </h5>
