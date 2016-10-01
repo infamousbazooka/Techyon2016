@@ -204,24 +204,10 @@
 </div>
 
 
-<script>
-   var options = [
-    {selector: '.ruleclass', offset: 200, callback: customCallbackFunc } },
-    {selector: '.other-class', offset: 200, callback: function() {
-      customCallbackFunc();
-    } },
-  ];
-  Materialize.scrollFire(options);
-        
-</script>
-
 
 <script >
   var options = [
-    {selector: '#rules', offset: 50, callback: 'Materialize.toast("This is our ScrollFire Demo!", 1500 )' },
-    {selector: '#rules', offset: 205, callback: 'Materialize.toast("Please continue scrolling!", 1500 )' },
-    {selector: '#rules', offset: 400, callback: 'Materialize.showStaggeredList("#rules")' },
-    {selector: '#image-test', offset: 500, callback: 'Materialize.fadeInImage("#image-test")' }
+    {selector: '.ruleclass', offset: 400, callback: 'Materialize.showStaggeredList("#rules")' },
   ];
   Materialize.scrollFire(options);
       
@@ -236,62 +222,91 @@
       </div>
     </div> -->
     <div class="parallax container"><img src="hackathon4.png" alt="Unsplashed background img 3"></div>
-  </div>
-<div class="center light">
-<div id="rules">
-<a href="#!" class="btn" onclick="Materialize.showStaggeredList('#rules')">Click Me</a>
- <h1>Rules</h1>
-<h5 class="light container">
-  <ul class=" hide-on-med-and-down ruleclass" id="rules" >
-        <li > • The team size can be a maximum of 3 members<br></li>
-        <li > • Each team will get 5 minutes to present their solutions<br></li>
-        <li > • Each team will get 5 minutes to present their solutions<br></li>
-        <li > • Developed Solutions should be related to the theme. <br></li>
-        <li > • DEMO / WORKING CODE IS MANDATORY.<br></li>
-        <li > • Complete reuse of college projects or open source projects available online are prohibited<br></li>
+</div>
+<div class="light">
+  <div id="rules">
+       <center>
+        <div class="col s12 m7 l8 container card horizontal card_head  pink lighten-1">
+          <h5 class="header" style="margin-left:50px ">Rules</h5>
+        </div>
+       </center> 
+      <h5 class="light container">
+          <div class="card horizontal">
+              <div class="card-stacked">
+                <div class="card-content">
+                    <ul class=" hide-on-med-and-down ruleclass" id="rules" >
+                         <li style=""> • The team size can be a maximum of 3 members<br></li>
+                        <li style=""> • Each team will get 5 minutes to present their solutions<br></li>
+                        <li style=""> • Each team will get 5 minutes to present their solutions<br></li>
+                        <li style=""> • Developed Solutions should be related to the theme. <br></li>
+                        <li style=""> • DEMO / WORKING CODE IS MANDATORY.<br></li>
+                        <li style=""> • Complete reuse of college projects or open source projects available online are prohibited<br></li>
 
-  </ul>
-</h5>
+                     </ul>
+                </div>
+            </div>
+          </div>
+      </h5>
+  </div>
 </div>
 
 <div>
-<h1>Guidelines</h1>
-<h5 class="light center container">
+<center>
+        <div class="col s12 m7 l8 container card horizontal card_head  pink lighten-1">
+          <h5 class="header" style="margin-left:50px ">Guidelines</h5>
+        </div>
+</center> 
+<h5 class="light container">
+  <div class="card horizontal">
+              <div class="card-stacked">
+                <div class="card-content">
+                    <ul class=" hide-on-med-and-down ruleclass" id="guidelines" >
+                     <li> • Teams need to COMPULSORILY be present at 9:30am where the Hackathon Theme will be told by the PSL Team and you get a chance to ask Questions regarding the Theme.<br></li>
+                    <br><li> • If you are present later you will have to ask the Student coordinators of the Event regarding the Theme.<br></li>
+                    <br><li> • Teams will also HAVE to come with their own Development Environment ie. Laptops etc.<br></li>
+                    <br><li> • A power Strip will be handy.<br></li>
+                    <br><li> • Internet connectivity will be provided at the Labs.<br></li>
+                    <br><li> • Teams will have to check if their Hardware ie Laptops are compatible with the Projector BEFORE HAND.<br></li>
+                    <br><li> • This is to ensure that there are no problems/incompatibility issues during the Presentation with the judges later. <br></li>
 
 
-<ul class=" hide-on-med-and-down">
-        <li> • Teams need to COMPULSORILY be present at 9:30am where the Hackathon Theme will be told by the PSL Team and you get a chance to ask Questions regarding the Theme.<br></li>
-        <br><li> • If you are present later you will have to ask the Student coordinators of the Event regarding the Theme.<br></li>
-        <br><li> • Teams will also HAVE to come with their own Development Environment ie. Laptops etc.<br></li>
-        <br><li> • A power Strip will be handy.<br></li>
-        <br><li> • Internet connectivity will be provided at the Labs.<br></li>
-        <br><li> • Teams will have to check if their Hardware ie Laptops are compatible with the Projector BEFORE
-HAND.<br></li>
-        <br><li> • This is to ensure that there are no problems/incompatibility issues during the Presentation with the judges later. <br></li>
-
-  </ul>
-</h5>
+                     </ul>
+                </div>
+            </div>
+          </div>
+    </h5>
   </div>
 
-
-<h1 class="container">How to?</h1>
-<h5 class="light center container">
-Teams will have to sign up online via the Website.
-Registration can also be done at the Venue on Day 1 BEFORE 10AM.</h6>
- 
+<div id="howto">
+<center>
+        <div class="col s12 m7 l8 container card horizontal card_head  pink lighten-1">
+          <h5 class="header" style="margin-left:50px ">How To</h5>
+        </div>
+</center> 
+<h5 class="light container">
+<div class="card horizontal">
+              <div class="card-stacked">
+                <div class="card-content">
+                    Teams will have to sign up online via the Website.
+                    Registration can also be done at the Venue on Day 1 BEFORE 10AM.
+                </div>
+            </div>
+          </div>
+ </h5>
+ </div>
 
 <div id="platforms">
 <center>
-   <div class="col s12 m7 container card horizontal card_head  pink lighten-1">
+   <div class="col s12 m7 l8 container card horizontal card_head  pink lighten-1 ">
       <h5 class="header" style="margin-left:50px ">Platforms</h5>
   </div>
 </center>
-
+<center>
       <a class="btn-large" onclick="Materialize.toast('Android', 4000)"> &nbsp <i class="material-icons">android</i>&nbsp</a> &nbsp &nbsp &nbsp 
       <a class="btn-large" onclick="Materialize.toast('Web', 4000)">&nbsp <i class="material-icons">web</i>&nbsp</a> &nbsp &nbsp &nbsp 
       <a class="btn-large" onclick="Materialize.toast('iOS', 4000)">&nbsp <i class="material-icons">perm_device_information</i>&nbsp</a> &nbsp &nbsp &nbsp 
       <a class="btn-large" onclick="Materialize.toast('Desktop', 4000)">&nbsp <i class="material-icons">picture_in_picture</i>&nbsp</a> &nbsp &nbsp &nbsp 
-     
+</center>  
 </div>
 <br>
 <br>
